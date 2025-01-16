@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 struct Font {
     static func bold(_ size: CGFloat) -> UIFont {
@@ -96,3 +97,13 @@ extension UIColor {
         }
     }
 }
+
+extension ConstraintMaker {
+    func pinToSuperView() {
+        self.left.equalToSuperview()
+        self.top.equalToSuperview()
+        self.right.equalToSuperview()
+        self.bottom.equalToSuperview()
+    }
+}
+
